@@ -1,0 +1,86 @@
+:root {
+    --main-bg: #f4e9da;
+    --secondary-bg: #273253;
+    --main-color: #1a1d20;
+    --main-red-color: #ed5c4d;
+}
+
+/* COMMON */
+
+header {
+    background-color: var(--main-bg);
+}
+
+footer {
+    background-color: var(--secondary-bg);
+}
+
+.vertical-padding {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.text-accent {
+    color: var(--main-red-color);
+    font-style: italic;
+}
+
+/* HEADER */
+.navbar-brand {
+    color: var(--main-color);
+}
+
+.navbar-nav .nav-item {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.nav-item .nav-link {
+    color: var(--main-color);
+}
+
+
+#hero {
+    background-color: var(--main-bg);
+}
+
+#about {
+    background-color: var(--main-bg);
+}
+
+#services {
+    background-color: var(--main-bg);
+}
+
+#faq {
+    background-color: var(--main-bg);
+}
+
+#contacts {
+    background-color: var(--main-bg);
+}
+
+/* HERO */
+#hero h1 {
+    font-size: 52px;
+}
+
+#hero h2 {
+    font-size: 36px;
+}
+
+.home-hero-img {
+    background-image: url("../images/hero.jpg");
+    background-size: cover;
+    background-position: center center;
+    min-height: 50vh;
+}
+
+#services ul {
+    list-style: none;
+}
+
+#services ul .icon-wrapper {
+    width: 50px;
+}
+
