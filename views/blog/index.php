@@ -1,3 +1,9 @@
+<?php
+use yii\helpers\Html;
+use yii\widgets\ActiveForm;
+?>
+
+<!-- HERO -->
 <section id="hero">
     <div class="container">
         <div class="vertical-padding col-lg-8">
@@ -12,6 +18,7 @@
     <div class="home-hero-img"></div>
 </section>
 
+<!-- SERVICES -->
 <section id="services">
     <div class="container">
         <div class="vertical-padding">
@@ -72,3 +79,39 @@
     </div>
 </section>
 
+<!-- SUBSCRIBE -->
+<section id="subscribe">
+    <div class="container">
+        <div class="vertical-padding row">
+            <div class="col-lg-6">
+                <h2 class="mb-3">Subscribe and keep up with the latest from Moiz</h2>
+                <p>
+                    Maecenas ultricies, ligula id condimentum efficitur, orci diam tincidunt nisi, et mollis nisl dui ut risus. Nam neque magna, rutrum id sapien elementum, ornare pretium arcu. Suspendisse lacinia pharetra lobortis. Donec vitae eros ut velit lacinia aliquam sodales hendrerit.
+                </p>
+                <br>
+                <p>Phasellus ut urna eget justo consectetur at ante. Etiam ipsum neque, feugiat ut gravida non, imperdiet nec mi. Quisque vitae urna ut mauris laoreet ullamcorper quis sit amet tellus</p>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="border-drop-left">
+                    <div>
+
+                        <?php $form = ActiveForm::begin(); ?>
+                        <?= $form->field($model, 'name')?>
+                        <?= $form->field($model, 'email')?>
+
+                        <div class="mb-4">
+                            <p>Your email will be safely stored in our database. We respect your privacy. Signing up is quick and easy and you can unsubscribe instantly at any time by clicking the link in the footer of our emails.</p>
+                        </div>
+
+                        <div class="form-group">
+                            <?= Html::submitButton('Subscribe', ['class' => 'btn btn-primary']) ?>
+                        </div>
+                        <?php ActiveForm::end(); ?>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>

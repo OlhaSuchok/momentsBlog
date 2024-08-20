@@ -1,6 +1,9 @@
 <?php
 
 namespace app\controllers;
+
+use app\models\SubscribeForm;
+use Yii;
 use yii\web\Controller;
 
 class BlogController extends Controller
@@ -8,7 +11,13 @@ class BlogController extends Controller
 
     public function actionIndex()
     {
-        return $this->render('index');
+        $model = new SubscribeForm();
+
+        if ($model->load(Yii::$app->request->post()) && $model->validate()) {
+            return $this->render('subscribe-confirm', ['model' => $model]);
+        } else {
+            return $this->render('index', ['model' => $model]);
+        }
     }
 
     public function actionAbout()
